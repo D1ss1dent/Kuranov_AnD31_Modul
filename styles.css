@@ -1,0 +1,259 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ffd700;
+    box-sizing: border-box;
+    background-image: url('img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 10px;
+    height: 100%;
+}
+
+.header {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    background-color: #003366;
+    color: #ffd700;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    height: fit-content;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.header__logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: #003366;
+    color: #ffd700;
+    padding: 20px;
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.search-social__search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.search-social__social-media {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-media__image {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.additional-content {
+    padding: 15px;
+    background-color: #003366;
+    border-radius: 15px;
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.main-content {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background-color: #003366;
+    color: #ffd700;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    height: fit-content;
+}
+
+.main-content__title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-content__product {
+    display: flex;
+    background-color: #036dd6;
+    color: #ffd700;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.product__image {
+    width: 30%;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 20px;
+    border: 2px dashed #ffd700;
+}
+
+.product__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product__specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.product__specs li {
+    margin-bottom: 5px;
+}
+
+.product__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.product__description {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.menu {
+    grid-column: 3 / 4;
+    grid-row: 2;
+    background-color: #003366;
+    color: #ffd700;
+    padding: 20px;
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #003366;
+    color: #ffd700;
+    border-radius: 15px;
+}
+
+.menu__item,
+.search-social__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #004080;
+}
+
+.menu__link {
+    display: block;
+    padding: 15px;
+    color: #ffd700;
+    transition: background-color 0.3s;
+}
+
+.menu__item:hover,
+.search-social__icon:hover {
+    background-color: #445;
+}
+
+.footer {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    background-color: #003366;
+    color: #ffd700;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    height: fit-content;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .header {
+        grid-row: 1;
+    }
+
+    .footer {
+        grid-row: 2;
+    }
+
+    .sidebar {
+        grid-row: 3;
+    }
+
+    .menu {
+        grid-row: 4;
+    }
+
+    .main-content {
+        grid-row: 5;
+    }
+
+    .header,
+    .footer,
+    .sidebar,
+    .menu,
+    .main-content {
+        grid-column: 1 / 2;
+        width: auto;
+    }
+
+    .product__image {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .main-content__product {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo-text {
+        font-size: 20px;
+    }
+
+    .main-content__title {
+        font-size: 24px;
+    }
+}
